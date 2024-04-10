@@ -6,20 +6,28 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:55 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/09 13:35:32 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/10 14:51:24 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char *read_str(const char *buffer)
-{
-	
-}
 
-int	ft_printf(const char *, ...)
+int	ft_printf(const char *buffer, ...)
 {
-	char *buffer;
+	int result; // ft_printf return a int value
+	va_list arg;
+	int i;
 
-	buffer = (char *)
+	i = 0;
+	va_start(arg, buffer);
+	while (buffer[i])
+	{
+		if (buffer[i] == '%')
+		{
+			i++;
+			
+		}
+		i++;
+	}
 }
