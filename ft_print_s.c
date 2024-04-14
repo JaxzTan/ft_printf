@@ -6,18 +6,16 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:47:46 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/14 17:37:21 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/14 18:29:17 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
-
 int	ft_print_s(char *str)
 {
 	if (!str)
-		return (write(1, "(NULL)", 6));
+		return (write(1, "(null)", 6));
 	else
 		return (write(1, str, ft_strlen(str)));
 }

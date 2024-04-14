@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:55 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/14 17:51:41 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/14 18:38:14 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_check(va_list arg, const char c)
 		return (ft_print_s(va_arg(arg, char *)));
 	if (c == 'd' || c == 'i')
 		return (ft_print_int(va_arg(arg, int)));
-	// if (c == 'p')
-	// 	return(ft_print_p(va_arg(arg, )));
+	if (c == 'p')
+		return(ft_print_p(va_arg(arg, void *)));
 	if (c == '%')
 		return (write(1, "%", 1));
 	return (0);
