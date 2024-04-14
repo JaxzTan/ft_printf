@@ -3,25 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_s.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:47:46 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/13 12:18:01 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/14 17:37:21 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_s(char *str)
-{
-	int	i;
 
-	i = 0;
-	if (!str[i])
-		return (NULL);
-	while (str[i])
-	{
-		ft_print_c(str[i]);
-		i++;
-	}
+
+int	ft_print_s(char *str)
+{
+	if (!str)
+		return (write(1, "(NULL)", 6));
+	else
+		return (write(1, str, ft_strlen(str)));
 }

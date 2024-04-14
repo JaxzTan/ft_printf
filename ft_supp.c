@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_supp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:49:24 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/13 12:16:51 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/14 17:38:34 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	if (!str[i])
-		return (NULL);
 	while (str[i])
 		i++;
-	retrun (i);
+	return (i);
 }

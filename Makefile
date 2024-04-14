@@ -1,17 +1,31 @@
-Name = libftprintf.a
+NAME = libftprintf.a
+
+# LIBFT_DIR = ./libft.h
+
+# LIBFT := $(LIBFT_DIR)/libft.a
+
+# $(LIBFT) =
+# 			make -C $(LIBFT_DIR) all
 
 SRCS = ft_printf.c\
+		ft_print_c.c\
+		ft_print_s.c\
+		ft_supp.c\
+		# ft_print_int.c\
+		# ft_print_p.c\
+		# ft_print_u.c\
+		# ft_print_xX.c
+
+# SRCSB =
 
 OBJ = $(SRCS:%.c=%.o)
 
-LIBFT = ./libft/libft.a
-
 COMPILER = cc
 
-CFALAGS = -Wall -Wextra -Werror
- 
-all : SRCS bonus
-	ar -crs $(NAME) $(OBJ)\
+CFLAGS = -Wall -Wextra -Werror
+
+all : mandatory
+	ar -crs $(NAME) $(OBJ)
 
 mandatory :
 	$(COMPILER) $(CFLAGS) -c $(SRCS)
