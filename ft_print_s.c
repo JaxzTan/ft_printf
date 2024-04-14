@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_s.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 12:37:58 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/13 20:14:00 by chtan            ###   ########.fr       */
+/*   Created: 2024/04/12 14:47:46 by chtan             #+#    #+#             */
+/*   Updated: 2024/04/13 12:18:01 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *buffer, ...);
-int	ft_print_c(char c);
-void	ft_print_s(char *str);
-int	ft_strlen(char *str);
-#endif
+void	ft_print_s(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str[i])
+		return (NULL);
+	while (str[i])
+	{
+		ft_print_c(str[i]);
+		i++;
+	}
+}

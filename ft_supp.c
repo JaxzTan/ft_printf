@@ -3,27 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_supp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 21:09:52 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/11 16:20:38 by chtan            ###   ########.fr       */
+/*   Created: 2024/04/12 14:49:24 by chtan             #+#    #+#             */
+/*   Updated: 2024/04/13 12:16:51 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_c(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_putstr_s(char *str)
-{
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	i = 0;
+	if (!str[i])
+		return (NULL);
+	while (str[i])
+		i++;
+	retrun (i);
 }
-
-int	ft_putint_DI(int nb)
