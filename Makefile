@@ -12,9 +12,8 @@ SRCS = ft_printf.c\
 		ft_print_s.c\
 		ft_supp.c\
 		ft_print_int.c\
-		# ft_print_p.c\
+		ft_print_pxX.c\
 		# ft_print_u.c\
-		# ft_print_xX.c
 
 # SRCSB =
 
@@ -39,3 +38,4 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
