@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:58 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/14 19:03:34 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/17 14:28:37 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 int		ft_printf(const char *buffer, ...);
 int		ft_print_c(char c);
 int		ft_print_s(char *str);
-int 	ft_print_pxX(void *str);
+int 	ft_print_xX(unsigned int num, char c);
+int		ft_print_p(size_t buff);
 int		ft_print_int(int nb);
 int		ft_strlen(char *str);
 char	*ft_itoa(int n);
