@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pxX.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 18:38:35 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/19 10:08:39 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/19 13:30:20 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*int	print_add(uintptr_t buffer, char *base)
+int	print_add(uintptr_t buffer, char *base)
 {
 	if (buffer == 0)
 		return (0);
@@ -22,7 +22,7 @@
 
 int	ft_print_p(uintptr_t buff)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (!buff)
@@ -30,9 +30,9 @@ int	ft_print_p(uintptr_t buff)
 	len = write(1, "0x", 2);
 	len += print_add(buff, "0123456789abcdef");
 	return (len);
-}*/
+}
 
-int print_base(unsigned int num, char *base)
+int	print_base(unsigned int num, char *base)
 {
 	if (num == 0)
 		return (0);
@@ -40,8 +40,7 @@ int print_base(unsigned int num, char *base)
 		return (print_base(num / 16, base) + write(1, &base[num % 16], 1));
 }
 
-
-int ft_print_xX(unsigned int num, char c)
+int	ft_print_x(unsigned int num, char c)
 {
 	if (!num)
 		return (write(1, "0", 1));

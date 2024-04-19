@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:55 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/19 10:09:17 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/19 13:23:56 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ int	ft_check(va_list arg, const char c)
 {
 	if (c == 'c')
 		return (ft_print_c((char) va_arg(arg, int)));
-	// if (c == 's')
-	// 	return (ft_print_s(va_arg(arg, char *)));
-	// if (c == 'd' || c == 'i')
-	// 	return (ft_print_int(va_arg(arg, int)));
-	// if (c == '%')
-	// 	return (write(1, "%", 1));
-	// if (c == 'p')
-	// 	return(ft_print_p((size_t)va_arg(arg, void *)));
-	// if (c == 'x' || c == 'X')
+	if (c == 's')
+		return (ft_print_s(va_arg(arg, char *)));
+	if (c == 'd' || c == 'i')
+		return (ft_print_int(va_arg(arg, int)));
+	if (c == '%')
+		return (write(1, "%", 1));
+	if (c == 'p')
+		return (ft_print_p((size_t)va_arg(arg, void *)));
+	if (c == 'x' || c == 'X')
 		return (ft_print_xX(va_arg(arg, size_t), c));
-	// if (c == 'u')
-	// 	return (ft_print_p(va_arg(arg, unsigned int)));
+	if (c == 'u')
+		return (ft_print_u(va_arg(arg, unsigned int)));
 	return (0);
 }
 
