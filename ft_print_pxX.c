@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pxX.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 18:38:35 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/17 14:51:21 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/19 10:08:39 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_add(uintptr_t buffer, char *base)
+/*int	print_add(uintptr_t buffer, char *base)
 {
 	if (buffer == 0)
 		return (0);
@@ -30,7 +30,7 @@ int	ft_print_p(uintptr_t buff)
 	len = write(1, "0x", 2);
 	len += print_add(buff, "0123456789abcdef");
 	return (len);
-}
+}*/
 
 int print_base(unsigned int num, char *base)
 {

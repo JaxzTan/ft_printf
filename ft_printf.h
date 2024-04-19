@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:58 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/17 14:28:37 by chtan            ###   ########.fr       */
+/*   Updated: 2024/04/19 10:13:41 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_printf(const char *buffer, ...);
 int		ft_print_c(char c);
 int		ft_print_s(char *str);
 int 	ft_print_xX(unsigned int num, char c);
-int		ft_print_p(size_t buff);
+int		ft_print_p(uintptr_t buff);
 int		ft_print_int(int nb);
 int		ft_strlen(char *str);
 char	*ft_itoa(int n);
