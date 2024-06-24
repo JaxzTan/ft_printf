@@ -1,35 +1,34 @@
-NAME = libftprintf.a
-
-SRCS = ft_printf.c\
-		ft_print_c.c\
-		ft_print_s.c\
-		ft_supp.c\
-		ft_print_int.c\
-		ft_print_pxX.c\
-		ft_print_u.c\
-		ft_supp.c
-
-# SRCSB =
-
-OBJ = $(SRCS:%.c=%.o)
-
-COMPILER = cc
-
+NAME = push_swap
+AR = ar -crs
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
+LIBFT_PATH = ./libft
+LIBFT = $(LIBFT_PATH)/libft.a
+FT_PRINTF_PATH = ./ft_printf
+FT_PRINTF = $(FT_PRINTF_PATH)/ft_printf.a
 
-all : mandatory
-	ar -crs $(NAME) $(OBJ)
+OBJ = push_swap.c\
+	get_input.c\
 
-mandatory :
-	$(COMPILER) $(CFLAGS) -c $(SRCS)
+$(LIBFT) : 
+	make -C $(LIBFT_PATH) all
 
-bonus : all
+$(FT_PRINTF) :
+	make -C $(FT_PRINTF_PATH) all
 
-clean :
+all : $(LIBFT) $(FT_PRINTF)
+	$(AR) $(NAME)
+
+clean =  
 	rm -rf $(OBJ)
+	make -C $(LIBFT_PATH) clean
 
-fclean : clean
+utils = $(LIBFT) $(FT_PRINTF)
+	@echo "Utils built successfully"
+
+fclean = clean
 	rm -rf $(NAME)
+	make -C $(LIBFT_PATH) fclean
 
-re : fclean all
-
+norm : 
+	norminette *.c
