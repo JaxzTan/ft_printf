@@ -21,7 +21,8 @@ all : $(LIBFT) $(FT_PRINTF)
 
 clean =  
 	rm -rf $(OBJ)
-	make -C $(LIBFT_PATH) clean
+	make -C libft clean
+	make -C ft_printf clean
 
 utils = $(LIBFT) $(FT_PRINTF)
 	@echo "Utils built successfully"

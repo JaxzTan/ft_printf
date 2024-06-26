@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 13:19:33 by chtan             #+#    #+#             */
-/*   Updated: 2024/06/21 16:01:24 by chtan            ###   ########.fr       */
+/*   Updated: 2024/06/26 15:51:49 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ char	**get_input(int ac, char **av)
 	{
 		numbers = ft_split(av[1], ' ');
 		if (!check_dup(av) && check_num(ac, av))
-			return (1);
+			return (numbers);
 	}
+	return (0);
 }
