@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all : mandatory
 	ar -crs $(NAME) $(OBJ)
-
+	@echo ahahahahahah... Makefile work succ!!
 mandatory :
 	$(COMPILER) $(CFLAGS) -c $(SRC)
 
