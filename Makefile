@@ -9,7 +9,7 @@ FT_PRINTF = $(FT_PRINTF_PATH)/ft_printf.a
 
 SRC = push_swap.c\
 	get_input.c\
-	stack.c\
+	assign_stack.c\
 
 OBJ = $(SRC:%.c=%.o)
 
