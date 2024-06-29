@@ -57,20 +57,15 @@ all: mandatory bonus
 	ar -crs $(NAME) $(OBJ) $(OBJB)
 
 mandatory :
-	@echo "Compiling mandatory files..."
 	$(CC) $(CFLAGS) -c $(SRC)
-	@echo "compile success!"
 
 bonus :
-	@echo "compile bonus files"
 	$(CC) $(CFLAGS) -c $(SRCB)
-	@echo "success"
-
 clean : 
-	rm -rf $(OBJ) $(OBJB)
+	rm -f $(OBJ) $(OBJB)
 
 fclean : clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re : fclean all
 

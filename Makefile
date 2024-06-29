@@ -7,17 +7,22 @@ LIBFT = $(LIBFT_PATH)/libft.a
 FT_PRINTF_PATH = ./ft_printf
 FT_PRINTF = $(FT_PRINTF_PATH)/ft_printf.a
 
-OBJ = push_swap.c\
+SRC = push_swap.c\
 	get_input.c\
+	stack.c\
+
+OBJ = $(SRC:%.c=%.o)
 
 $(LIBFT) : 
 	make -C $(LIBFT_PATH) all
+	@echo libft done!!!
 
 $(FT_PRINTF) :
 	make -C $(FT_PRINTF_PATH) all
+	@echo printf done!!!
 
 all : $(LIBFT) $(FT_PRINTF)
-	$(AR) $(NAME)
+	$(AR) $(NAME) $(OBJ)
 
 clean =  
 	rm -rf $(OBJ)
