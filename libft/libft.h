@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 09:15:54 by chtan             #+#    #+#             */
-/*   Updated: 2024/06/29 16:50:41 by chtan            ###   ########.fr       */
+/*   Updated: 2024/07/01 15:33:48 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -65,5 +67,14 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// ft_printf
+int		ft_printf(const char *buffer, ...);
+int		ft_print_c(char c);
+int		ft_print_s(char *str);
+int		ft_print_x(unsigned int num, char c);
+int		ft_print_p(uintptr_t buff);
+int		ft_print_int(int nb);
+int		ft_print_u(unsigned int nb);
 
 #endif

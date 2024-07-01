@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_s.c                                       :+:      :+:    :+:   */
+/*   ft_print_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 14:47:46 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/14 18:29:17 by chtan            ###   ########.fr       */
+/*   Created: 2024/04/10 21:09:52 by chtan             #+#    #+#             */
+/*   Updated: 2024/07/01 15:38:46 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_print_s(char *str)
+int	ft_print_c(char c)
 {
-	if (!str)
-		return (write(1, "(null)", 6));
-	else
-		return (write(1, str, ft_strlen(str)));
+	return (write(1, &c, 1));
 }

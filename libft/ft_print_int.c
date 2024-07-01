@@ -6,11 +6,11 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 17:54:00 by chtan             #+#    #+#             */
-/*   Updated: 2024/04/19 16:36:11 by chtan            ###   ########.fr       */
+/*   Updated: 2024/07/01 15:38:51 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_print_int(int nb)
 {

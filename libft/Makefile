@@ -49,12 +49,24 @@ SRCB = ft_lstnew.c\
 	ft_lstiter.c\
 	ft_lstmap.c
 
+PRINTF = ft_printf.c\
+		ft_print_c.c\
+		ft_print_s.c\
+		ft_print_int.c\
+		ft_print_pxX.c\
+		ft_print_u.c\
+
 OBJ = $(SRC:%.c=%.o)
 
 OBJB = $(SRCB:%.c=%.o)
 
+OBJ_PRINTF = $(PRINTF:%.c=%.o)
+
+printf :
+	$(CC) $(CFLAGS) -c $(PRINTF)
+
 all: mandatory bonus
-	ar -crs $(NAME) $(OBJ) $(OBJB)
+	ar -crs $(NAME) $(OBJ) $(OBJB) $(OBJ_PRINTF)
 
 mandatory :
 	$(CC) $(CFLAGS) -c $(SRC)
@@ -62,7 +74,7 @@ mandatory :
 bonus :
 	$(CC) $(CFLAGS) -c $(SRCB)
 clean : 
-	rm -f $(OBJ) $(OBJB)
+	rm -f $(OBJ) $(OBJB) $(OBJ_PRINTF)
 
 fclean : clean
 	rm -f $(NAME)
