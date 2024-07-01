@@ -1,45 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   assign_stack.c                                     :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 16:01:54 by chtan             #+#    #+#             */
-/*   Updated: 2024/07/01 17:11:54 by chtan            ###   ########.fr       */
+/*   Created: 2024/07/01 10:08:54 by chtan             #+#    #+#             */
+/*   Updated: 2024/07/01 17:35:53 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	assign_node(t_stack **stack, int nb)
+void sa(t_stack **a)
 {
-	t_stack	*node;
-	t_stack	*cur;
+	t_stack	*temp;
 
-	if (!*stack)
+	if (!*a || !(*a)->next)
 		return ;
-	node = malloc(sizeof(t_stack));
-	if (!node)
-		return ;
-	node->next = NULL;
-	node->val = nb;
-	cur = *stack;
-	while (cur->next != NULL)
-		cur = cur->next;
-	cur->next = node;
+	temp = (*a)->next;
+	(*a)->next = temp->next;
+	temp->next = *a;
+	*a = temp;
 }
 
-int	assign_stack_a(t_stack **a, t_stack **input, int ac)
+void sb(t_stack **b)
 {
-	int	nb;
-	int	i;
+	t_stack	*temp;
 
-	i = 0;
-	while (input[i])
-	{
-		nb = ft_atoi(input[i++]);
-		assign_node(a, nb);
-	}
-	return (i);
+	if (!*b || !(*b)->next)
+		return ;
+	temp = (*b)->next;
+	(*b)->next = temp->next;
+	temp->next = *b;
+	*b = temp;
+}
+
+void	ss(t_stack **a, t_stack **b)
+{
+	sa(a);
+	sb(b);
 }
