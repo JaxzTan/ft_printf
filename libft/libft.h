@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 09:15:54 by chtan             #+#    #+#             */
-/*   Updated: 2024/07/01 15:33:48 by chtan            ###   ########.fr       */
+/*   Updated: 2024/07/02 16:49:34 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE  42
+# endif
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int z);
@@ -77,4 +81,11 @@ int		ft_print_p(uintptr_t buff);
 int		ft_print_int(int nb);
 int		ft_print_u(unsigned int nb);
 
+//get next line
+char	*get_next_line(int fd);
+char	*ft_strrjoin(const char *s1, const char *s2);
+int		ft_strrlen(char *str);
+void	ft_bzerro(void *s, size_t n);
+void	*ft_ccalloc(size_t count, size_t size);
+char	*ft_strrrchr(const char *s, int c);
 #endif

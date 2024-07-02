@@ -9,6 +9,8 @@ LIBFT = $(LIBFT_PATH)/libft.a
 SRC = push_swap.c\
 	get_input.c\
 	assign_stack.c\
+	swap.c\
+	simple_sort.c\
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -17,7 +19,7 @@ $(LIBFT) :
 	@echo libft done!!!
 
 
-all : utils
+all : utils mandatory
 	$(AR) $(NAME) $(OBJ)
 
 mandatory :
@@ -28,7 +30,7 @@ clean =
 	make -C libft clean
 
 utils : $(LIBFT)
-	@echo "Utils built successfully"
+	@echo "libft built successfully"
 
 fclean = clean
 	rm -rf $(NAME)

@@ -56,17 +56,22 @@ PRINTF = ft_printf.c\
 		ft_print_pxX.c\
 		ft_print_u.c\
 
+GNL = get_next_line_bonus.c\
+	get_next_line_utils_bonus.c\
+
 OBJ = $(SRC:%.c=%.o)
-
 OBJB = $(SRCB:%.c=%.o)
-
 OBJ_PRINTF = $(PRINTF:%.c=%.o)
+OBJ_GNL = $(GNL:%.c=%.o)
 
 printf :
 	$(CC) $(CFLAGS) -c $(PRINTF)
 
-all: mandatory bonus
-	ar -crs $(NAME) $(OBJ) $(OBJB) $(OBJ_PRINTF)
+gnl :
+	$(CC) $(CFLAGS) -c $(GNL)
+
+all: mandatory bonus printf gnl
+	ar -crs $(NAME) $(OBJ) $(OBJB) $(OBJ_PRINTF) $(OBJ_GNL)
 
 mandatory :
 	$(CC) $(CFLAGS) -c $(SRC)
@@ -74,7 +79,7 @@ mandatory :
 bonus :
 	$(CC) $(CFLAGS) -c $(SRCB)
 clean : 
-	rm -f $(OBJ) $(OBJB) $(OBJ_PRINTF)
+	rm -f $(OBJ) $(OBJB) $(OBJ_PRINTF) $(OBJ_GNL)
 
 fclean : clean
 	rm -f $(NAME)
